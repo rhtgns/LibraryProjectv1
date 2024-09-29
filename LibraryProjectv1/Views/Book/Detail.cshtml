@@ -1,0 +1,17 @@
+﻿@model BookEntity
+<hr />
+<div class="card" style="width: 18rem;">
+    <div class="card-header">
+        @Model.Title
+    </div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">Name : @Model.Title</li>
+        <li class="list-group-item">Author ID: @Model.AuthorId</li>
+        <li class="list-group-item">Genre : @Model.Genre</li>
+        <li class="list-group-item">Publish Date : @Model.PublishDate.ToString("yyyy-MM-dd")</li>
+        <li class="list-group-item">Genre : @Model.ISBN</li>
+        <li class="list-group-item">Genre : @Model.CopiesAvailable</li>
+    </ul>
+</div>
+<hr />
+<a class="btn btn-info" asp-controller="Book" asp-action="List">Back To Home</a>

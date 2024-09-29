@@ -1,0 +1,14 @@
+﻿@model AuthorEntity
+<hr />
+<div class="card" style="width: 18rem;">
+    <div class="card-header">
+        @Model.FirstName - @Model.LastName
+    </div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">Name : @Model.FirstName</li>
+        <li class="list-group-item">LastName @Model.LastName</li>
+        <li class="list-group-item">DateOfBirth : @Model.DateOfBirth.ToString("yyyy-MM-dd")</li>
+    </ul>
+</div>
+<hr />
+<a class="btn btn-info" asp-controller="Author" asp-action="List">Back To Home</a>

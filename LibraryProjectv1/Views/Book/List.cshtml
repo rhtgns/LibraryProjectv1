@@ -1,0 +1,39 @@
+﻿@model List<BookListViewModel>
+<h3 class="text-center">Book List</h3>
+<a asp-controller="Book" asp-action="Create" class="btn btn-sm btn-primary">New Book</a>
+<hr />
+<div class="container-lg">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Title</th>
+                <th scope="col">Author</th>
+                <th scope="col">Genre</th>
+                <th scope="col">PublishDate</th>
+                <th scope="col">ISBN</th>
+                <th scope="col">CopiesAvailable</th>
+                <th>CRUD</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var book in Model)
+            {
+                <tr>
+                    <td style="width:10px">@book.Id</td>
+                    <td>@book.Title</td>
+                    <td>@book.AuthorId</td>
+                    <td>@book.Genre</td>
+                    <td>@book.PublishDate.ToString("yyyy-MM-dd")</td>
+                    <td>@book.ISBN</td>
+                    <td>@book.CopiesAvailable</td>
+                    <td style="width:195px">
+                        <a asp-controller="Book" asp-action="Detail" asp-route-id="@book.Id" class="btn btn-sm btn-info">Details</a>
+                        <a asp-controller="Book" asp-action="Edit" asp-route-id="@book.Id" class="btn btn-sm btn-warning">Edit</a>
+                        <a asp-controller="Book" asp-action="Delete" asp-route-id="@book.Id" class="btn btn-sm btn-danger">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

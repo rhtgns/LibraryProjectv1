@@ -1,0 +1,16 @@
+﻿@model UserEntity
+<hr />
+<div class="card" style="width: 18rem;">
+    <div class="card-header">
+        @Model.FullName
+    </div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">Name : @Model.FullName</li>
+        <li class="list-group-item">Email : @Model.Email</li>
+        <li class="list-group-item">Password : @Model.Password</li>
+        <li class="list-group-item">Phone : @Model.PhoneNumber</li>
+        <li class="list-group-item">JoinDate : @Model.JoinDate.ToString("yyyy-MM-dd")</li>
+    </ul>
+</div>
+<hr />
+<a class="btn btn-info" asp-controller="User" asp-action="List">Back To Home</a>

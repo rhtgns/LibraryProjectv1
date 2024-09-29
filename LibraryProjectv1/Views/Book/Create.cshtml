@@ -1,0 +1,29 @@
+﻿@model BookAddViewModel
+
+<h2>Add Book</h2>
+<hr />
+
+<form method="post" asp-controller="Book" asp-action="Create">
+    <div class="mb-2">
+        <label class="form-label">Title : </label>
+        <input asp-for="Title" type="text" class="form-control" />
+    </div>
+    <div class="mb-2">
+        <label class="form-label">PublishDate : </label>
+        <input asp-for="PublishDate" type="date" class="form-control" />
+    </div>
+    <div class="mb-2">
+        <label class="form-label">Genre : </label>
+        <input asp-for="Genre" type="text" class="form-control" />
+    </div>
+    <div class="mb-2">
+        <label class="form-label">ISBN : </label>
+        <input asp-for="ISBN" type="text" class="form-control" />
+    </div>
+    <div class="mb-2">
+        <label class="form-label">CopiesAvailable : </label>
+        <input asp-for="CopiesAvailable" type="number" class="form-control" />
+    </div>
+    <hr />
+    <button type="submit" class="btn btn-primary">Add Book</button>
+</form>

@@ -1,0 +1,26 @@
+﻿@model UserEditViewModel
+
+<h2>Edit User</h2>
+<span>For editing, either enter your old password or specify a new password. You cannot leave it blank.</span>
+<hr />
+
+<form method="post" asp-controller="User" asp-action="Edit">
+    <div class="mb-2">
+        <label class="form-label">FullName : </label>
+        <input asp-for="FullName" type="text" class="form-control" />
+    </div>
+    <div class="mb-2">
+        <label class="form-label">Email : </label>
+        <input asp-for="Email" type="email" class="form-control" />
+    </div>
+    <div class="mb-2">
+        <label class="form-label">Password : </label>
+        <input asp-for="Password" type="password" class="form-control" />
+    </div>
+    <div class="mb-2">
+        <label class="form-label">Phone : </label>
+        <input asp-for="PhoneNumber" type="text" class="form-control" />
+    </div>
+    <hr />
+    <button type="submit" class="btn btn-primary">Edit User</button>
+</form>

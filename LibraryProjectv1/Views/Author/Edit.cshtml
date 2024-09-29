@@ -1,0 +1,21 @@
+﻿@model AuthorEditViewModel
+
+<h2>Edit Author @Model.FirstName</h2>
+<hr />
+
+<form method="post" asp-controller="Author" asp-action="Edit">
+    <div class="mb-2">
+        <label class="form-label">FirstName : </label>
+        <input asp-for="FirstName" type="text" class="form-control" />
+    </div>
+    <div class="mb-2">
+        <label class="form-label">LastName : </label>
+        <input asp-for="LastName" type="text" class="form-control" />
+    </div>
+    <div class="mb-2">
+        <label class="form-label">DateOfBirth : </label>
+        <input asp-for="DateOfBirth" type="date" class="form-control" />
+    </div>
+    <hr />
+    <button type="submit" class="btn btn-primary">Edit Author</button>
+</form>
